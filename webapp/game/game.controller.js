@@ -1,9 +1,9 @@
-export function GameController(config, socketFactory) {
+export function GameController($log, config, socketFactory) {
 	'ngInject';
 	var socket = socketFactory.buildSocket(config.wsServer);
 	socket.connect(function() {
-		console.log('connect');
+		$log.debug('connected');
 	}, function() {
-		console.log('error');
+		$log.debug('error');
 	});
 }

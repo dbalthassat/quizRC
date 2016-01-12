@@ -1,3 +1,5 @@
+/* global SockJS, Stomp */
+
 export function socketFactory() {
 	return {
 		buildSocket: function(url) {
